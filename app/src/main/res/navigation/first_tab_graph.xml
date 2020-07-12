@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_tab_graph"
+    app:startDestination="@id/ferstTabFragmentA">
+
+    <fragment
+        android:id="@+id/ferstTabFragmentA"
+        android:name="com.dorokhov.navigationapp.fragments.firsttab.FerstTabFragmentA"
+        android:label="fragment_ferst_tab_a"
+        tools:layout="@layout/fragment_ferst_tab_a">
+        <action
+            android:id="@+id/action_ferstTabFragmentA_to_firstTabFragmentB"
+            app:destination="@id/firstTabFragmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstTabFragmentB"
+        android:name="com.dorokhov.navigationapp.fragments.firsttab.FirstTabFragmentB"
+        android:label="fragment_first_tab_b"
+        tools:layout="@layout/fragment_first_tab_b">
+        <action
+            android:id="@+id/action_firstTabFragmentB_to_firstTabFragmentC"
+            app:destination="@id/firstTabFragmentC" />
+        <action
+            android:id="@+id/action_firstTabFragmentB_to_ferstTabFragmentA"
+            app:destination="@id/ferstTabFragmentA"
+            app:popUpTo="@navigation/first_tab_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstTabFragmentC"
+        android:name="com.dorokhov.navigationapp.fragments.firsttab.FirstTabFragmentC"
+        android:label="fragment_first_tab_c"
+        tools:layout="@layout/fragment_first_tab_c">
+        <action
+            android:id="@+id/action_firstTabFragmentC_to_ferstTabFragmentA"
+            app:destination="@id/ferstTabFragmentA"
+            app:popUpTo="@navigation/first_tab_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

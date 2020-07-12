@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_tab_graph"
+    app:startDestination="@id/secondTabFragmentA">
+
+    <fragment
+        android:id="@+id/secondTabFragmentA"
+        android:name="com.dorokhov.navigationapp.fragments.secondtab.SecondTabFragmentA"
+        android:label="fragment_second_tab_a"
+        tools:layout="@layout/fragment_second_tab_a">
+        <action
+            android:id="@+id/action_secondTabFragmentA_to_secondTabFtagmentB"
+            app:destination="@id/secondTabFtagmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondTabFtagmentB"
+        android:name="com.dorokhov.navigationapp.fragments.secondtab.SecondTabFtagmentB"
+        android:label="fragment_second_tab_ftagment_b"
+        tools:layout="@layout/fragment_second_tab_ftagment_b">
+        <action
+            android:id="@+id/action_secondTabFtagmentB_to_secondTabFragmentA"
+            app:destination="@id/secondTabFragmentA"
+            app:popUpTo="@navigation/second_tab_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
