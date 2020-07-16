@@ -2,10 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:icon="@drawable/ic_baseline_accessible_24"
         android:id="@+id/first_tab_menu"
         android:title="Первый таб" />
 
     <item
+        android:icon="@drawable/ic_baseline_add_shopping_cart_24"
         android:id="@+id/second_tab_menu"
         android:title="Второй таб" />
 

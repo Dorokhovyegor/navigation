@@ -8,19 +8,19 @@
     <fragment
         android:id="@+id/secondTabFragmentA"
         android:name="com.dorokhov.navigationapp.fragments.secondtab.SecondTabFragmentA"
-        android:label="fragment_second_tab_a"
+        android:label="Фрагмент А"
         tools:layout="@layout/fragment_second_tab_a">
         <action
-            android:id="@+id/action_secondTabFragmentA_to_secondTabFtagmentB"
-            app:destination="@id/secondTabFtagmentB" />
+            android:id="@+id/action_secondTabFragmentA_to_secondTabFragmentB"
+            app:destination="@id/secondTabFragmentB" />
     </fragment>
     <fragment
-        android:id="@+id/secondTabFtagmentB"
-        android:name="com.dorokhov.navigationapp.fragments.secondtab.SecondTabFtagmentB"
-        android:label="fragment_second_tab_ftagment_b"
+        android:id="@+id/secondTabFragmentB"
+        android:name="com.dorokhov.navigationapp.fragments.secondtab.SecondTabFragmentB"
+        android:label="Фрагмент B"
         tools:layout="@layout/fragment_second_tab_ftagment_b">
         <action
-            android:id="@+id/action_secondTabFtagmentB_to_secondTabFragmentA"
+            android:id="@+id/action_secondTabFragmentB_to_secondTabFragmentA"
             app:destination="@id/secondTabFragmentA"
             app:popUpTo="@navigation/second_tab_graph"
             app:popUpToInclusive="true" />
